@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b12">
+<title>ABSEN PEDAGANG — Futuristic</title>
+<style>
+:root{--bg:#06130d;--panel:#0b2117;--panel2:#102b1e;--green:#35f28a;--green2:#16b968;--text:#e9fff1;--muted:#91b5a0;--line:#204a34;--danger:#ff7777}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#123b26 0,transparent 38%),radial-gradient(ellipse at 100% 30%,#0a2c1d 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+header{padding:26px 18px 18px;max-width:1100px;margin:auto}.topline{display:flex;align-items:center;gap:10px;color:var(--green);font-size:12px;font-weight:800;letter-spacing:2px}.dot{width:9px;height:9px;background:var(--green);border-radius:50%;box-shadow:0 0 15px var(--green)}h1{font-size:clamp(28px,5vw,44px);line-height:1.05;margin:14px 0 8px;letter-spacing:-1.5px}h1 span{color:var(--green)}.sub{color:var(--muted);margin:0;max-width:650px;font-size:14px;line-height:1.6}
+main{max-width:1100px;margin:auto;padding:0 18px 40px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 20px}.stat,.panel{background:linear-gradient(145deg,rgba(16,43,30,.96),rgba(8,27,18,.96));border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 40px #0002}.stat{padding:16px}.stat small{display:block;color:var(--muted);font-size:11px;letter-spacing:1px;text-transform:uppercase}.stat strong{display:block;font-size:25px;margin-top:7px;color:var(--green)}.layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{padding:20px;min-width:0}.panel h2{margin:0 0 5px;font-size:18px}.hint{margin:0 0 18px;color:var(--muted);font-size:12px;line-height:1.5}.field{margin-bottom:14px}.field label{display:block;font-size:12px;color:#c3e8d0;margin-bottom:7px;font-weight:700}.field input,.field textarea,.field select{width:100%;background:#06170e;border:1px solid #28563c;border-radius:10px;padding:12px;color:var(--text);font:inherit;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--green);box-shadow:0 0 0 3px #35f28a16}.field textarea{min-height:100px;resize:vertical}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px}.upload{border:1px dashed #3a8057;border-radius:12px;padding:14px;background:#071a10}.upload input{padding:8px;border:0;background:transparent}.preview{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.preview img{width:92px;height:92px;object-fit:cover;border-radius:9px;border:1px solid var(--line)}.btn{border:0;border-radius:11px;padding:12px 15px;font-weight:800;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}.primary{background:linear-gradient(100deg,var(--green),#16c96b);color:#042012;width:100%}.secondary{background:#173a27;color:#d8ffe5;border:1px solid #2c6543}.danger{background:#3c1b1b;color:#ffc1c1;border:1px solid #723232}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.actions .btn{flex:1}.record{border:1px solid var(--line);background:#081a11;border-radius:13px;padding:14px;margin-top:10px}.recordhead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.recordhead strong{font-size:15px;overflow-wrap:anywhere}.badge{font-size:10px;color:var(--green);border:1px solid #28764a;background:#103321;border-radius:20px;padding:5px 8px;white-space:nowrap}.record p{font-size:12px;line-height:1.55;color:#b7d6c2;margin:9px 0}.record img{width:100%;max-height:190px;object-fit:contain;background:#06130d;border-radius:9px;margin-top:8px}.recordfoot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px;color:var(--muted);font-size:11px}.recordfoot button{font-size:11px;padding:7px 10px}.empty{padding:28px 10px;text-align:center;color:var(--muted);font-size:13px;border:1px dashed var(--line);border-radius:12px}.searchrow{display:flex;gap:8px;margin:14px 0}.searchrow input{flex:1;min-width:0;background:#06170e;border:1px solid #28563c;border-radius:10px;padding:10px;color:var(--text)}.notice{font-size:11px;color:var(--muted);line-height:1.6;margin-top:15px}.footer{text-align:center;padding:25px 12px;color:#719982;font-size:11px;letter-spacing:.5px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#d8ffe5;color:#052012;padding:12px 18px;border-radius:12px;font-size:13px;font-weight:800;box-shadow:0 8px 30px #0006;display:none;z-index:5}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:22px}.panel{padding:16px}header{padding-top:22px}}@media(max-width:390px){.twocol{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:span 2}}
+</style>
+</head>
+<body>
+<header>
+ <div class="topline"><span class="dot"></span> PEDAGANG KOTA FUTURISTIC <span style="opacity:.5">/ SYSTEM</span></div>
+ <h1>ABSEN <span>PEDAGANG</span></h1>
+ <p class="sub">Panel laporan duty resmi. Catat identitas IC, waktu mulai dan selesai duty, kegiatan, serta bukti screenshot dalam satu log.</p>
+</header>
+<main>
+ <section class="stats">
+  <div class="stat"><small>Total laporan</small><strong id="total">0</strong></div>
+  <div class="stat"><small>Hari ini</small><strong id="today">0</strong></div>
+  <div class="stat"><small>Bukti tersimpan</small><strong id="proofs">0</strong></div>
+ </section>
+ <div class="layout">
+  <section class="panel">
+   <h2>＋ Buat laporan duty</h2>
+   <p class="hint">Isi semua data dengan benar. Screenshot bukti disimpan di perangkat ini bersama laporan.</p>
+   <form id="form">
+    <div class="field"><label for="name">NAMA IC *</label><input id="name" name="name" placeholder="Contoh: Lucian_Futuristic" required maxlength="80"></div>
+    <div class="twocol">
+     <div class="field"><label for="start">MULAI DUTY *</label><input id="start" type="datetime-local" required></div>
+     <div class="field"><label for="end">OFF DUTY *</label><input id="end" type="datetime-local" required></div>
+    </div>
+    <div class="field"><label for="activity">KEGIATAN SELAMA DUTY *</label><textarea id="activity" placeholder="Contoh: melayani warga, menjual paket, mengisi stok, membantu rekan..." required maxlength="2000"></textarea></div>
+    <div class="field"><label for="proof">SCREENSHOT BUKTI *</label><div class="upload"><input id="proof" type="file" accept="image/*" required><div class="notice" style="margin-top:5px">Pilih screenshot dari galeri. Gunakan gambar yang jelas. File disimpan secara lokal di browser ini.</div><div id="preview" class="preview"></div></div></div>
+    <button class="btn primary" type="submit">SIMPAN LAPORAN ↗</button>
+   </form>
+   <div class="notice">🔒 Privasi: data hanya tersimpan pada browser/perangkat ini. Hapus data browser atau berganti perangkat dapat menghilangkan log. Ekspor cadangan secara berkala.</div>
+  </section>
+  <section class="panel">
+   <h2>▤ Logs pedagang</h2>
+   <p class="hint">Cari laporan, lihat bukti, ekspor cadangan, atau hapus log yang tidak diperlukan.</p>
+   <div class="searchrow"><input id="search" placeholder="Cari nama IC atau kegiatan..."><button id="export" class="btn secondary" type="button">Ekspor JSON</button></div>
+   <div class="actions" style="margin-top:0"><button id="csv" class="btn secondary" type="button">Unduh CSV</button><button id="clear" class="btn danger" type="button">Hapus semua</button></div>
+   <div id="logs"></div>
+  </section>
+ </div>
+</main>
+<div class="footer">PEDAGANG KOTA FUTURISTIC · DUTY LOG SYSTEM · LOCAL STORAGE</div>
+<div class="toast" id="toast"></div>
+<script>
+const DB='pedagang_absen_v1';
+let logs=[];
+const $=id=>document.getElementById(id);
+function notify(msg){const t=$('toast');t.textContent=msg;t.style.display='block';clearTimeout(notify.timer);notify.timer=setTimeout(()=>t.style.display='none',2400)}
+function load(){try{logs=JSON.parse(localStorage.getItem(DB)||'[]')}catch{logs=[]}render()}
+function persist(){try{localStorage.setItem(DB,JSON.stringify(logs));return true}catch(e){notify('Penyimpanan penuh. Ekspor log dan gunakan screenshot lebih kecil.');return false}}
+function fmt(v){if(!v)return '—';const d=new Date(v);return isNaN(d)?v:d.toLocaleString('id-ID',{dateStyle:'medium',timeStyle:'short'})}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){
+ $('total').textContent=logs.length;
+ const today=new Date().toLocaleDateString('sv-SE');
+ $('today').textContent=logs.filter(x=>(x.created||'').slice(0,10)===today).length;
+ $('proofs').textContent=logs.filter(x=>x.proof).length;
+ const q=$('search').value.trim().toLowerCase();
+ const shown=logs.filter(x=>(x.name+' '+x.activity).toLowerCase().includes(q)).sort((a,b)=>(b.created||'').localeCompare(a.created||''));
+ if(!shown.length){$('logs').innerHTML='<div class="empty">Belum ada laporan yang cocok.<br>Log yang disimpan akan muncul di sini.</div>';return}
+ $('logs').innerHTML=shown.map(x=>`<article class="record">
+  <div class="recordhead"><strong>${esc(x.name)}</strong><span class="badge">TERSIMPAN</span></div>
+  <p><b>Mulai:</b> ${esc(fmt(x.start))}<br><b>Off duty:</b> ${esc(fmt(x.end))}<br><b>Durasi:</b> ${esc(duration(x.start,x.end))}</p>
+  <p><b>Kegiatan:</b><br>${esc(x.activity).replace(/\n/g,'<br>')}</p>
+  ${x.proof?`<a href="${x.proof}" target="_blank" rel="noopener"><img src="${x.proof}" alt="Screenshot bukti duty"></a>`:'<p>Bukti tidak tersedia.</p>'}
+  <div class="recordfoot"><span>Disimpan: ${esc(fmt(x.created))}</span><button class="btn danger" onclick="removeLog('${x.id}')">Hapus log</button></div>
+ </article>`).join('');
+}
+function duration(a,b){let n=(new Date(b)-new Date(a))/60000;if(!Number.isFinite(n)||n<0)return 'Periksa waktu';let h=Math.floor(n/60),m=Math.round(n%60);return (h?h+' jam ':'')+m+' menit'}
+function removeLog(id){if(!confirm('Hapus laporan ini?'))return;logs=logs.filter(x=>x.id!==id);persist();render();notify('Laporan dihapus')}
+$('proof').addEventListener('change',()=>{const f=$('proof').files[0];$('preview').innerHTML='';if(!f)return;if(!f.type.startsWith('image/')){notify('Pilih file gambar');$('proof').value='';return}const img=document.createElement('img');img.alt='Preview bukti';img.src=URL.createObjectURL(f);$('preview').appendChild(img)});
+$('form').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const start=$('start').value,end=$('end').value,file=$('proof').files[0];
+ if(new Date(end)<new Date(start)){notify('Waktu off duty tidak boleh sebelum mulai duty');return}
+ if(!file){notify('Screenshot bukti wajib diisi');return}
+ if(file.size>2.5*1024*1024){notify('Ukuran screenshot maksimal 2,5 MB agar penyimpanan cukup');return}
+ const reader=new FileReader();
+ reader.onerror=()=>notify('Gagal membaca screenshot');
+ reader.onload=()=>{
+  const item={id:Date.now().toString(36)+Math.random().toString(36).slice(2,7),name:$('name').value.trim(),start,end,activity:$('activity').value.trim(),proof:reader.result,created:new Date().toISOString()};
+  logs.unshift(item);
+  if(persist()){render();$('form').reset();$('preview').innerHTML='';notify('Laporan berhasil disimpan')}
+ };
+ reader.readAsDataURL(file);
+});
+$('search').addEventListener('input',render);
+$('export').addEventListener('click',()=>{if(!logs.length){notify('Belum ada log untuk diekspor');return}download('absen-pedagang-backup.json',JSON.stringify({app:'ABSEN PEDAGANG',version:1,exportedAt:new Date().toISOString(),logs},null,2),'application/json');notify('Cadangan JSON dibuat')});
+$('csv').addEventListener('click',()=>{if(!logs.length){notify('Belum ada log untuk diunduh');return}const rows=[['Nama IC','Mulai Duty','Off Duty','Kegiatan','Waktu Simpan','Memiliki Bukti'],...logs.map(x=>[x.name,x.start,x.end,x.activity,x.created,x.proof?'Ya':'Tidak'])];const csv=rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');download('absen-pedagang.csv','\ufeff'+csv,'text/csv;charset=utf-8');notify('File CSV dibuat')});
+function download(name,data,type){const a=document.createElement('a'),url=URL.createObjectURL(new Blob([data],{type}));a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+$('clear').addEventListener('click',()=>{if(!logs.length){notify('Log masih kosong');return}if(!confirm('Yakin hapus SEMUA laporan dari perangkat ini? Sebaiknya ekspor cadangan terlebih dahulu.'))return;logs=[];persist();render();notify('Semua log dihapus')});
+const now=new Date(),local=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,16);$('start').value=local;$('end').value=local;
+load();
+</script>
+</body>
+</html>
